@@ -1,15 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Allow production build to complete even if there are type errors
+  // Ignore type errors during production builds (optional)
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Disable ESLint blocking build
+  // Ignore ESLint errors during builds (optional)
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Required for Render deployment
+  // Required for deploying on Render (bundles app into standalone output)
   output: "standalone",
 };
 
